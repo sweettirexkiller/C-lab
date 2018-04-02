@@ -1,0 +1,79 @@
+Lab 02 Projekt Warsztatu
+
+Program jest katalogiem warsztatu samochodowego z mozliwoscia przechowywania samochodów i napraw. Dane sa 
+przechowywame w strukturach z dynamiczna alokacja pamieci.
+
+Program przetrzymuje dane w trzech strukturach: Naprwa, Samochod, Warsztat. 
+
+Oto ich deklaracje.
+
+
+typedef struct Warsztat
+{
+	int liczbaSamochodow;
+	int max_liczba_samochodow;
+	Samochod **samochody;
+	int liczbaNapraw;
+	int max_liczba_napraw;
+	Naprawa **naprawy;
+	
+}Warsztat;
+
+
+typedef struct Samochod {
+	char marka[512];
+	char model[512];
+	int rok_produkcji;
+	double przebieg;
+	int id; 
+	int liczbaNapraw;
+	int max_liczba_napraw;
+	Naprawa **tablica_napraw;
+}Samochod;
+
+
+typedef struct Naprawa {
+	int id;
+	char nazwa[512]; 
+	double roboczo_godziny;
+}Naprawa;
+
+Ponizsze 
+drzewo opisuje zagniezdzenie poszegolnych struktur:
+
++warsztat----samochod------naprawy
+	|
+	|
+	|
+	|
+	-----naprawy	
+
+Funkcjinalnosc programu opiera sie o liniowe menu z dwudziestoma komendami w postaci:
+
+1 - Dodaj samochod
+2 - Dodaj naprawe
+3 - Skasuj samochod
+4 - Skasuj naprawe
+5 - Wypisz warsztat
+6 - Wypisz samochody
+7 - Wypisz Naprawy
+8 - Modyfikuj samochod
+9 - Modyfikuj naprawe
+10 - Dodaj naprawe do samochodu
+11 - Usun naprawe z samochodu
+12 - Sortuj Naprawy wedlug godziny
+13 - Sortuj Naprawy wedlug nazwy
+14 - Sortuj Samochody wedlug marki
+15 - Sortuj Samochody wedlug modelu
+16 - Sortuj Samochody wedlug przebiegu
+17 - Sortuj Samochody wedlug rocznika
+18 - Sortuj Samochody wedlug liczby napraw
+wyjscie - Wyjscie z programu
+
+Po wybraniu komendy przez uzywtkownika, poszczegolna komenda zostaje wykonana. Kazda z komend jest opisana w jednej z 3 zbiorów plików: 
+
+1)warsztat.h Warsztat.c
+2)samochod.h samochod.c
+3)Naprawa.h Naprawa.c
+
+Program jest wykonywany bez przyjmowania zmiennych z konsoli, lecz prosi o dane z stdin.

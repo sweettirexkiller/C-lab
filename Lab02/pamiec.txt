@@ -1,0 +1,35 @@
+Liczba napraw:
+3
+Naprawy:
+1
+cc
+3.000000
+2
+dd
+4.000000
+3
+ee
+5.000000
+Liczba samochodow:
+2
+1
+a
+a
+1
+1.000000
+Liczba napraw:
+2
+Id napraw:
+1
+1
+2
+b
+b
+2
+2.000000
+Liczba napraw:
+3
+Id napraw:
+2
+3
+1
